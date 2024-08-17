@@ -27,4 +27,10 @@ terraform {
       version = "~> 2.2.0"
     }
   }
+  backend "s3" {
+    bucket = "hicloudekstfstate237"
+    key    = "terraform.tfstate"
+    region = "us-east-1"
 }
+}
+

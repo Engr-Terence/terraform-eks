@@ -6,7 +6,8 @@ provider "aws" {
 data "aws_availability_zones" "available" {}
 
 locals {
-  cluster_name = "go-web-app-eks-${random_string.suffix.result}"
+  cluster_name = "go-web-app-eks"
+  # cluster_name = "go-web-app-eks-${random_string.suffix.result}"
 }
 
 resource "random_string" "suffix" {
